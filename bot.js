@@ -33,38 +33,38 @@ var currentOrders;
 var currentOrderList;
 
 COLOR_MAPPINGS = {
-    '#6D001A': 1,
-    '#BE0039': 2,
-    '#FF4500': 3,
-    '#FFA800': 4,
-    '#FFD635': 5,
+    '#6D001A': 0,
+    '#BE0039': 1,
+    '#FF4500': 2,
+    '#FFA800': 3,
+    '#FFD635': 4,
+    '#FFF8B8': 5,
     '#00A368': 6,
     '#00CC78': 7,
-    '#0D1117': 8,
-    '#7EED56': 9,
-    '#00756F': 10,
-    '#009EAA': 11,
-    '#00CCC0': 12,
-    '#2450A4': 13,
-    '#3690EA': 14,
-    '#51E9F4': 15,
-    '#493AC1': 16,
-    '#6A5CFF': 17,
-    '#94B3FF': 18,
-    '#811E9F': 19,
-    '#B44AC0': 20,
-    '#E4ABFF': 21,
-    '#DE107F': 22,
-    '#FF3881': 23,
-    '#FF99AA': 24,
-    '#6D482F': 25,
-    '#9C6926': 26,
-    '#FFB470': 27,
-    '#000000': 28,
-    '#515252': 29,
-    '#898D90': 30,
-    '#D4D7D9': 31,
-    '#FFFFFF': 32,
+    '#7EED56': 8,
+    '#00756F': 9,
+    '#009EAA': 10,
+    '#00CCC0': 11,
+    '#2450A4': 12,
+    '#3690EA': 13,
+    '#51E9F4': 14,
+    '#493AC1': 15,
+    '#6A5CFF': 16,
+    '#94B3FF': 17,
+    '#811E9F': 18,
+    '#B44AC0': 19,
+    '#E4ABFF': 20,
+    '#DE107F': 21,
+    '#FF3881': 22,
+    '#FF99AA': 23,
+    '#6D482F': 24,
+    '#9C6926': 25,
+    '#FFB470': 26,
+    '#000000': 27,
+    '#515252': 28,
+    '#898D90': 29,
+    '#D4D7D9': 30,
+    '#FFFFFF': 31
 };
 
 let rgbaJoin = (a1, a2, rowSize = 1000, cellSize = 4) => {
@@ -202,6 +202,8 @@ async function attemptPlace(accessToken) {
     try {
         map0 = await getMapFromUrl(await getCurrentImageUrl('0'))
         map1 = await getMapFromUrl(await getCurrentImageUrl('1'));
+        map2 = await getMapFromUrl(await getCurrentImageUrl('2'));
+        map3 = await getMapFromUrl(await getCurrentImageUrl('3'));
     } catch (e) {
         console.warn('Error retrieving map: ', e);
         setTimeout(retry, 15000); // probeer opnieuw in 15sec.
