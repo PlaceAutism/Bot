@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         r/place autism Bot
 // @namespace    https://github.com/MrKev312/Bot
-// @version      20
+// @version      21
 // @description  De bot voor r/place autism!
 // @author       NoahvdAa
 // @match        https://www.reddit.com/r/place/*
