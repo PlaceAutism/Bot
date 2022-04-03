@@ -1,8 +1,8 @@
 **NEDERLANDSE VERSIE ONDERAAN DE PAGINA**
 
-# PlaceNL Bot (English)
+# r/place autism Bot (English)
 
-The bot for PlaceNL and their allies! This bot connects with the [command server](https://github.com/PlaceNL/Commando) and gets it's orders from there. You can see the orderhistory [here](https://placenl.noahvdaa.me/).
+The bot for r/place autism and their allies! This bot connects with the [command server](https://github.com/MrKev312/Commando) and gets it's orders from there. You can see the orderhistory [here](https://placenl.noahvdaa.me/).
 
 ## User script bot
 
@@ -11,7 +11,7 @@ The bot for PlaceNL and their allies! This bot connects with the [command server
 before you start, make sure your cooldown has run out!
 
 1. Install the [Tampermonkey](https://www.tampermonkey.net/) browserextention.
-2. Click on this link: [https://github.com/PlaceNL/Bot/raw/master/placenlbot.user.js](https://github.com/PlaceNL/Bot/raw/master/placenlbot.user.js). If everything went well you'll see Tampermonkey ask you to add it. Click **Install**.
+2. Click on this link: [https://github.com/MrKev312/Bot/raw/master/placenlbot.user.js](https://github.com/MrKev312/Bot/raw/master/placenlbot.user.js). If everything went well you'll see Tampermonkey ask you to add it. Click **Install**.
 3. Reload your **r/place** tab. If everything went well, you'll see "Accesstoken ophalen..." in the top right of your screen. The bot is now active, You'll be able to see what the bot is doing through these messages.
 
 ### Cons of this bot
@@ -34,7 +34,7 @@ before you start, make sure your cooldown has run out!
 ### Installation instructions
 
 1. Install [NodeJS](https://nodejs.org/).
-2. Download the bot via [this link](https://github.com/PlaceNL/Bot/archive/refs/heads/master.zip).
+2. Download the bot via [this link](https://github.com/MrKev312/Bot/archive/refs/heads/master.zip).
 3. Extract the bot anywhere on your desktop
 4. Open a command prompt/terminal in this folder
     Windows: Shift+right mousebutton in the folder -> Click on "open Powershell here"
@@ -57,9 +57,9 @@ It has been confirmed to run on x64(average desktop computer) and armv7(raspberr
 
 -----
 
-# PlaceNL Bot
+# r/place autism Bot
 
-De bot voor PlaceNL! Deze bot verbindt met de [commando server](https://github.com/PlaceNL/Commando) en krijgt daar order van. De ordergeschiedenis kan je [hier](https://placenl.noahvdaa.me/) bekijken.
+De bot voor r/place autism! Deze bot verbindt met de [commando server](https://github.com/MrKev312/Commando) en krijgt daar order van. De ordergeschiedenis kan je [hier](https://placenl.noahvdaa.me/) bekijken.
 
 ## User script bot
 
@@ -68,7 +68,7 @@ De bot voor PlaceNL! Deze bot verbindt met de [commando server](https://github.c
 Voordat je begint, zorg dat je pixel wachttijd is verlopen!
 
 1. Installeer de [Tampermonkey](https://www.tampermonkey.net/) browserextensie.
-2. Klik op deze link: [https://github.com/PlaceNL/Bot/raw/master/placenlbot.user.js](https://github.com/PlaceNL/Bot/raw/master/placenlbot.user.js). Als het goed is zal Tampermonkey je moeten aanbieden om een userscript te installeren. Klik op **Install**.
+2. Klik op deze link: [https://github.com/MrKev312/Bot/raw/master/placenlbot.user.js](https://github.com/MrKev312/Bot/raw/master/placenlbot.user.js). Als het goed is zal Tampermonkey je moeten aanbieden om een userscript te installeren. Klik op **Install**.
 3. Herlaad je **r/place** tabblad. Als alles goed is gegaan, zie je "Accesstoken ophalen..." rechtsbovenin je scherm. De bot is nu actief, en zal je via deze meldingen rechtsbovenin je scherm op de hoogte houden van wat 'ie doet.
 
 ### Nadelen van deze bot
@@ -93,7 +93,7 @@ Voordat je begint, zorg dat je pixel wachttijd is verlopen!
 ### Installatieinstructies
 
 1. Installeer [NodeJS](https://nodejs.org/).
-2. Download de bot via [deze link](https://github.com/PlaceNL/Bot/archive/refs/heads/master.zip).
+2. Download de bot via [deze link](https://github.com/MrKev312/Bot/archive/refs/heads/master.zip).
 3. Pak de bot uit naar een folder ergens op je computer.
 4. Open een command prompt/terminal in deze folder
     Windows: Shift+Rechter muis knop in de folder -> Click op "Powershell hier openen"
