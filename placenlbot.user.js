@@ -1,11 +1,13 @@
 // ==UserScript==
-// @name         r/place autism Bot
-// @namespace    https://github.com/MrKev312/Bot
-// @version      22
+// @version      24
 // @description  De bot voor r/place autism!
+// @namespace    https://github.com/placeautism/Bot
+// @name         r/place autism Bot
 // @author       NoahvdAa
 // @match        https://www.reddit.com/r/place/*
 // @match        https://new.reddit.com/r/place/*
+// @connect      reddit.com
+// @connect      placenl.noahvdaa.me
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=reddit.com
 // @require	     https://cdn.jsdelivr.net/npm/toastify-js
 // @resource     TOASTIFY_CSS https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css
@@ -13,6 +15,7 @@
 // @downloadURL  https://github.com/MrKev312/Bot/raw/master/placenlbot.user.js
 // @grant        GM_getResourceText
 // @grant        GM_addStyle
+// @grant        GM.xmlHttpRequest
 // ==/UserScript==
 
 // Sorry voor de rommelige code, haast en clean gaatn iet altijd samen ;)
@@ -27,7 +30,7 @@ var currentPlaceCanvas = document.createElement('canvas');
 // Global constants
 const DEFAULT_TOAST_DURATION_MS = 10000;
 
-COLOR_MAPPINGS = {
+const COLOR_MAPPINGS = {
     '#6D001A': 0,
     '#BE0039': 1,
     '#FF4500': 2,
@@ -107,7 +110,7 @@ let getPendingWork = (work, rgbaOrder, rgbaCanvas) => {
     attemptPlace();
 
     setInterval(() => {
-        if (socket) socket.send(JSON.stringify({ type: 'ping' }));
+        if (socket && socket.readyState === WebSocket.OPEN) socket.send(JSON.stringify({ type: 'ping' }));
     }, 5000);
     setInterval(async () => {
         accessToken = await getAccessToken();
@@ -128,7 +131,7 @@ function connectSocket() {
             duration: DEFAULT_TOAST_DURATION_MS
         }).showToast();
         socket.send(JSON.stringify({ type: 'getmap' }));
-        socket.send(JSON.stringify({ type: 'brand', brand: 'userscriptV22' }));
+        socket.send(JSON.stringify({ type: 'brand', brand: 'userscriptV24' }));
     };
 
     socket.onmessage = async function (message) {
@@ -355,8 +358,14 @@ async function getCurrentImageUrl(id = '0') {
 function getCanvasFromUrl(url, canvas, x = 0, y = 0, clearCanvas = false) {
     return new Promise((resolve, reject) => {
         let loadImage = ctx => {
+        GM.xmlHttpRequest({
+            method: "GET",
+            url: url,
+            responseType: 'blob',
+            onload: function(response) {
+            var urlCreator = window.URL || window.webkitURL;
+            var imageUrl = urlCreator.createObjectURL(this.response);
             var img = new Image();
-            img.crossOrigin = 'anonymous';
             img.onload = () => {
                 if (clearCanvas) {
                     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -371,7 +380,9 @@ function getCanvasFromUrl(url, canvas, x = 0, y = 0, clearCanvas = false) {
                 }).showToast();
                 setTimeout(() => loadImage(ctx), 3000);
             };
-            img.src = url;
+            img.src = imageUrl;
+  }
+})
         };
         loadImage(canvas.getContext('2d'));
     });
